@@ -143,8 +143,12 @@ brew install docker
 
 
 # 4. set up ssh-keygen 
+You could use the key from ```multipass shell```
+```
+cp /var/root/Library/Application Support/multipassd/ssh-keys/id_rsa   ~/.ssh```
+```
+or generate new one
 https://github.com/roccqqck/certificates-notes/blob/main/ssh-keygen.md
-
 
 ```
 $ multipass list
@@ -154,14 +158,29 @@ Name                    State             IPv4             Image
 ubuntu20                Running           192.168.64.12    Ubuntu 20.04 LTS
 ```
 ```
-ssh ubuntu@192.168.64.12
+vim ~/.ssh/config
+```
+```
+Host            multipass_ubuntu20                # 代號
+Hostname        192.168.64.12        # IP or Domain name
+Port            22                # 指定埠口
+User            ubuntu                # 使用者名稱
+identityfile    ~/.ssh/id_rsa    # 指定金鑰
+```
+
+
+
+
+
+```
+ssh multipass_ubuntu20
 ```
 
 
 
 add mac env variable .zshrc
 ```
-$DOCKER_HOST="ssh://ubuntu@192.168.64.12"
+$DOCKER_HOST="ssh://multipass_ubuntu20"
 ```
 check docker command 
 ```
@@ -173,8 +192,10 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES     SIZE
 ```
 docker run -itd -p 8080:80 --name nginx nginx:stable
 ```
+http://192.168.64.12:8080
 
 
-vscode setting.json add one line {"docker.host": "ssh://ubuntu@192.168.64.12"}
+
+vscode setting.json add one line {"docker.host": "ssh://multipass_ubuntu20"}
 
 vscode -> Remote Explorer -> Containers -> click nginx:stable
