@@ -178,9 +178,9 @@ ssh multipass_ubuntu20
 
 
 
-add mac env variable .zshrc
+add mac env variable ```~/.zshrc```
 ```
-$DOCKER_HOST="ssh://multipass_ubuntu20"
+export DOCKER_HOST="ssh://multipass_ubuntu20"
 ```
 check docker command 
 ```
@@ -195,6 +195,6 @@ http://192.168.64.12:8080
 
 
 
-vscode setting.json add one line {"docker.host": "ssh://multipass_ubuntu20"}
+vscode ```setting.json``` add one line ```{"docker.host": "ssh://multipass_ubuntu20"}```
 
-vscode -> Remote Explorer -> Containers -> click nginx:stable
+vscode -> Remote Explorer -> Containers -> click ```nginx:stable```
