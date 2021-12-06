@@ -184,11 +184,10 @@ $DOCKER_HOST="ssh://multipass_ubuntu20"
 ```
 check docker command 
 ```
-docker ps
+docker version
+docker info
 ```
-```
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES     SIZE
-```
+
 ```
 docker run -itd -p 8080:80 --name nginx nginx:stable
 ```
