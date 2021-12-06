@@ -145,7 +145,7 @@ brew install docker
 # 4. set up ssh-keygen 
 You could use the key from ```multipass shell```
 ```
-cp /var/root/Library/Application Support/multipassd/ssh-keys/id_rsa   ~/.ssh```
+cp /var/root/Library/"Application Support"/multipassd/ssh-keys/id_rsa   ~/.ssh```
 ```
 or generate new one
 https://github.com/roccqqck/certificates-notes/blob/main/ssh-keygen.md
