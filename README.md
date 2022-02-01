@@ -201,6 +201,9 @@ vscode -> Remote Explorer -> Containers -> click ```nginx:stable```
 
 
 # 5.set local.driver
+https://multipass.run/docs/using-virtualbox-in-multipass-windows
+
+https://multipass.run/docs/using-virtualbox-in-multipass-macos
 ```
 sudo multipass set local.driver=virtualbox
 sudo multipass set local.driver=hyperkit
