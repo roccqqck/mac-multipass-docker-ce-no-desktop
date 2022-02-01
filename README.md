@@ -198,3 +198,11 @@ http://192.168.64.12:8080
 vscode ```setting.json``` add one line ```{"docker.host": "ssh://multipass_ubuntu20"}```
 
 vscode -> Remote Explorer -> Containers -> click ```nginx:stable```
+
+
+# 5.set local.driver
+```
+sudo multipass set local.driver=virtualbox
+sudo multipass set local.driver=hyperkit
+multipass set local.driver=hyperv
+```
